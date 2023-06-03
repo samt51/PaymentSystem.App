@@ -14,9 +14,12 @@ namespace PaymentSystem.Business
         public static void UseBusinessService(this IServiceCollection Services, IConfiguration configuration, IApplicationBuilder app)
         {
             Services.AddScoped<ICustomerDal, EfCustomerDal>();
+
             Services.AddScoped<ICustomerService, CustomerManager>();
             Services.AddScoped<ITransactionDal, EfTransactionDal>();
             Services.AddScoped<ITransactionService, TransactionManager>();
+
+            Services.AddScoped<IPayzeeService, PayzeeManager>();
             app.UseMiddleware<UseCustomExceptionHandler>();
 
 

@@ -3,7 +3,6 @@ using PaymentSystem.Core.Dtos.Payzee.Request;
 using PaymentSystem.Core.ExternalServices.PayzeeServices;
 using PaymentSystem.Core.Helpers;
 using PaymentSystem.Core.ResponseModel.PayzeeResponses;
-using static PaymentSystem.Core.Helpers.AuthorizationCont;
 
 namespace PaymentSystem.Business.Concrete
 {

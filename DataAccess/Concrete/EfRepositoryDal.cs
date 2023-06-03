@@ -40,7 +40,10 @@ namespace DataAccess.Concrete
             using (var db = new TContext())
             {
                 var find = db.Set<T>().Find(id);
-               
+                if (find == null)
+                {
+                    throw new Exception(typeof(T).Name + "Not Found");
+                }
                 return find;
             }
         }
